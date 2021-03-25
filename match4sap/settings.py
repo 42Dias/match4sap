@@ -76,7 +76,7 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'NAME': 'match4sap',
         'USER': 'postgres',
-        'PASSWORD': '123456',
+        'PASSWORD': '123456789',
         'PORT': 5432,
     }
 }
