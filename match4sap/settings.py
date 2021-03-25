@@ -171,7 +171,7 @@ GS_BUCKET_NAME = 'match4sap'
 # My configs
 AUTH_USER_MODEL = 'users.CustomUser'
 
-DEFAULT_FROM_EMAIL = 'equipe@match4sap.com'
+DEFAULT_FROM_EMAIL = 'no.reply@42dias.com.br'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
