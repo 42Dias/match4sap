@@ -3,10 +3,10 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# if os.getenv('GAE_INSTANCE'):
-#     SECRET_KEY = os.environ.get('SECRET_KEY')
-# else:
-#SECRET_KEY = 'fd3h&uqymrcsyo(_5%&@!jbf182o5)k!)xty=fm056gk34^3v3'
+ if os.getenv('GAE_INSTANCE'):
+     SECRET_KEY = os.environ.get('SECRET_KEY')
+ else:
+SECRET_KEY = 'fd3h&uqymrcsyo(_5%&@!jbf182o5)k!)xty=fm056gk34^3v3'
 
 DEBUG = True
 
