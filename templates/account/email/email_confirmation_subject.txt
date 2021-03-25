@@ -1,0 +1,5 @@
+{% load i18n %}
+
+{% autoescape off %}
+{% blocktrans %}Bem-vindo ao Match4SAP{% endblocktrans %}
+{% endautoescape %}

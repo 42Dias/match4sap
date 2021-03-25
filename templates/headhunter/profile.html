@@ -1,0 +1,71 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="blog_area section-padding mt-5">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3">
+        <div class="blog_left_sidebar">
+          <!-- <img src="{% static 'img/user-placeholder.jpg' %}" alt="" class="img-fluid w-100"> -->
+
+          <div class="button-group-area mt-sm-20 mb-30">
+            <button href="#" class="genric-btn disable radius e-large w-100">Tokens: {{ user.headhunter.tokens }}</button>
+
+            {% if user.headhunter.tokens == 0 %}
+            <button href="#" class="genric-btn disable radius e-large w-100">É necessário uma token</button>
+            {% else %}
+            <form action="{% url 'connection_form' %}">
+              {% csrf_token %}
+                <button class="genric-btn primary e-large w-100">Procurar profissionais SAP</button>
+            </form>
+            {% endif %}
+
+            {% if user.headhunter.cpf or user.headhunter.cnpj %}
+              <form action="{% url 'charge' %}" method="post">
+                {% csrf_token %}
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="{{ stripe_key }}"
+                  data-description="Connection"
+                  data-ammount="1500"
+                  data-locale="auto">
+                </script>
+                <script>
+                  // Hide default stripe button, be careful there if you
+                  // have more than 1 button of that class
+                  document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
+                </script>
+                <button href="#" class="genric-btn primary e-large w-100">Quero novos Tokens</button>
+              </form>
+            {% else %}
+              <form action="{% url 'tokens_form' %}">
+                {% csrf_token %}
+                <button class="genric-btn primary e-large w-100">Quero novos tokens</button>
+              </form>
+            {% endif %}
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-9 mb-30">
+        <div class="generic-blockquote">
+          <h3 class="text-heading">{{ user.full_name }}</h3>
+          <h3 class="text-heading">Buscas dos últimos 30 dias</h3>
+          <ul class="unordered-list">
+            {% for job in user.job_set.all %}
+              <li>
+                <p><a class="d-flex" href="{{ job.get_absolute_url }}">{{ job.title }}</a></p>
+              </li>
+              <hr>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

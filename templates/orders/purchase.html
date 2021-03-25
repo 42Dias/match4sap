@@ -1,0 +1,27 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<section class="blog_area section-padding mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mb-5 mb-lg-0">
+        <div class="blog_left_sidebar">
+          <h1 class="mt-5">Orders Page</h1>
+          <form action="{% url 'charge' %}" method="post">
+            {% csrf_token %}
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="{{ stripe_key }}"
+              data-description="Connection"
+              data-ammount="1500"
+              data-locale="auto">
+            </script>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<section class="blog_area section-padding mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="blog_left_sidebar">
+          <h3 class="widget_title">Compra realizada com sucesso!</h3>
+          <form action="{% url 'headhunter_profile' pk=user.id %}">
+            {% csrf_token %}
+              <button class="genric-btn primary-border e-large">Voltar para o perfil</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

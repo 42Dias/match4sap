@@ -1,0 +1,67 @@
+{% extends '_base.html' %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+
+<section class="blog_area section-padding mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="container box_1170">
+        <div class="blog_left_sidebar">
+          <h3 class="widget_title">Preencha seu CPF ou CNPJ</h3>
+
+          <form class="form-contact contact_form" action="" method="post">
+            <div class="row">
+              {% csrf_token %}
+
+              {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+              {% endfor %}
+
+              {% if form.errors %}
+                {% for field in form %}
+                  {% for error in field.errors %}
+                    <div class="col-4">
+                      <div class="alert alert-danger">
+                        <strong>{{ error|escape }}</strong>
+                      </div>
+                    </div>
+                  {% endfor %}
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                  <div class="alert alert-danger">
+                      <strong>{{ error|escape }}</strong>
+                  </div>
+                {% endfor %}
+              {% endif %}
+
+              {% for field in form %}
+                <div class="col-12">
+                  <div class="form-group">
+                    {{ field.label_tag }}
+                    {{ field|add_class:'form-control' }}
+
+                    {% for error in form.field.errors %}
+                      <span class="help-block">{{ error }}</span>
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-xs-12 text-center">
+                <button type="submit" class="genric-btn primary e-large w-100">
+                  Confirmar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

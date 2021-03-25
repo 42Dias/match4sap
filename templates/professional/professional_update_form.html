@@ -1,0 +1,173 @@
+{% extends '_base.html' %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+
+<section class="blog_area section-padding mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="container box_1170">
+        <div class="blog_left_sidebar">
+          <h3 class="mb-30">Atualizar Perfil</h3>
+          <form class="form-contact contact_form" action="" enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+
+            {% for hidden in form.hidden_fields %}
+              {{ hidden }}
+            {% endfor %}
+
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  {{ form.occupation.label_tag }}
+                  {% render_field form.occupation class+="form-control w-100" placeholder=form.occupation.label %}
+                  {% for error in form.occupation.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-group">
+                  {{ form.bio.label_tag }}
+                  {% render_field form.bio class+="form-control w-100" placeholder=form.bio.label %}
+                  {% for error in form.bio.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-group">
+                  {{ form.methodology.label_tag }}
+                  {% render_field form.methodology class+="form-control w-100 single-input-secondary" placeholder=form.methodology.label %}
+                  {% for error in form.methodology.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="form-group">
+                  {{ form.main_module.label_tag }}
+                  {% render_field form.main_module class+="form-control w-100 single-input-secondary" placeholder=form.main_module.label %}
+                  {% for error in form.main_module.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="form-group">
+                  {{ form.secondary_module.label_tag }}
+                  {% render_field form.secondary_module class+="form-control w-100 single-input-secondary" placeholder=form.secondary_module.label %}
+                  {% for error in form.secondary_module.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="form-group">
+                  {{ form.terciary_module.label_tag }}
+                  {% render_field form.terciary_module class+="form-control w-100 single-input-secondary" placeholder=form.terciary_module.label %}
+                  {% for error in form.terciary_module.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="form-group">
+                  {{ form.main_industry.label_tag }}
+                  {% render_field form.main_industry class+="form-control w-100 single-input-secondary" placeholder=form.main_industry.label %}
+                  {% for error in form.main_industry.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="form-group">
+                  {{ form.secondary_industry.label_tag }}
+                  {% render_field form.secondary_industry class+="form-control w-100 single-input-secondary" placeholder=form.secondary_industry.label %}
+                  {% for error in form.secondary_industry.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="form-group">
+                  {{ form.terciary_industry.label_tag }}
+                  {% render_field form.terciary_industry class+="form-control w-100 single-input-secondary" placeholder=form.terciary_industry.label %}
+                  {% for error in form.terciary_industry.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="form-group">
+                  {{ form.working_years.label_tag }}
+                  {% render_field form.working_years class+="form-control" placeholder=form.working_years.label %}
+                  {% for error in form.working_years.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="form-group">
+                  {{ form.implementations.label_tag }}
+                  {% render_field form.implementations class+="form-control" placeholder=form.implementations.label %}
+                  {% for error in form.implementations.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="form-group">
+                  {{ form.supports.label_tag }}
+                  {% render_field form.supports class+="form-control" placeholder=form.supports.label %}
+                  {% for error in form.supports.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-group">
+                  {{ form.resume.label_tag }}
+                  {% render_field form.resume class+="form-control" %}
+                  {% for error in form.resume.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-group">
+                  {{ form.profile_pic.label_tag }}
+                  {% render_field form.profile_pic class+="form-control" %}
+                  {% for error in form.profile_pic.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <button type="submit" class="genric-btn primary-border e-large" value="update">Quero receber meu assessment</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

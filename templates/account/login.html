@@ -1,0 +1,47 @@
+{% extends '_base.html' %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+
+<section class="blog_area section-padding mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="blog_left_sidebar">
+          <h3 class="widget_title">Log In</h3>
+
+          <form class="form-contact contact_form" method="post">
+            <div class="row">
+              {% csrf_token %}
+
+              {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+              {% endfor %}
+
+              {% for field in form %}
+                <div class="col-12">
+                  <div class="form-group">
+                    {{ field.label_tag }}
+                    {{ field|add_class:'form-control' }}
+
+                    {% for error in form.field.errors %}
+                      <span class="help-block">{{ error }}</span>
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endfor %}
+
+            </div>
+
+            <p><a href="{% url 'account_reset_password' %}">Esqueci minha senha</a></p>
+
+            <button type="submit" class="genric-btn primary-border e-large">Log In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

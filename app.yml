@@ -1,0 +1,33 @@
+runtime: python37
+entrypoint: gunicorn -b :8080 match4sap.wsgi
+
+env_variables:
+  SECRET_KEY: 'fd3h&uqymrcsyo(_5%&@!jbf182o5)k!)xty=fm056gk34^3v3'
+  STRIPE_TEST_PUBLISHABLE_KEY: 'pk_live_hW84t9eSb2WNTntk7gPU3lUJ00eWwcHSus'
+  STRIPE_TEST_SECRET_KEY: 'sk_live_qQDaiWMy09OTpBSF9fcAQKRn00vmOQOyTl'
+  GOOGLE_APPLICATION_CREDENTIALS: './Match4SAP-e7c74d073ea9.json'
+  SENDGRID_API_KEY: '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'
+
+
+beta_settings:
+  cloud_sql_instances: matchforsap:southamerica-east1:users
+
+handlers:
+- url: /static
+  static_dir: staticfiles/
+- url: .*
+  secure: always
+  script: auto
+
+# runtime: python
+# env: flex
+# entrypoint: gunicorn -b :8080 match4sap.wsgi
+
+# automatic_scaling:
+#   min_num_instances: 1
+#   max_num_instances: 7
+
+# beta_settings:
+#     cloud_sql_instances: matchforsap:southamerica-east1:users
+# runtime_config:
+#   python_version: 3

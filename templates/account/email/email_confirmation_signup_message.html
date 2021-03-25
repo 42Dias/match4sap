@@ -1,0 +1,25 @@
+<h1>{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}Bem-vindo ao {{ current_site.name }}!</h1>
+
+<p>O usuário <strong>{{ user_display }}</strong> foi cadastrado com sucesso no email {{ user.email }}.</p>
+
+<p>Caso não seja você, responda este e-mail para equipe@match4sap.com que iremos verificar</p>
+
+<p><strong>Match4SAP é uma plataforma para Profissionais e Recrutadores se conhecerem e juntos encontrarem soluções para os clientes SAP.</strong></p>
+
+<p><strong>Os profissionais SAP irão entender o que precisam fazer para aumentarem seu conhecimento e tornarem-se mais atrativo para os recrutadores....</strong></p>
+
+<p><strong>Os recrutadores irão encontrar os melhores profissionais para atender seus clientes...</strong></p>
+
+Para começar a usar a plataforma, acesse o 
+{% if user.is_headhunter %}
+<a href="www.match4sap.com{% url 'headhunter_profile' pk=user.id %}">link</a>
+{% else %}
+<a href="www.match4sap.com{% url 'professional_create_form' %}">link</a>
+{% endif %}
+
+<br />
+<br />
+
+{% endautoescape %}
+{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Obrigado por usar {{ site_name }}!
+{{ site_domain }}{% endblocktrans %}

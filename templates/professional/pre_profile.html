@@ -1,0 +1,35 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="blog_area section-padding mt-5">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-3">
+        <div class="blog_left_sidebar">
+          <img src="{% static 'img/user-placeholder.jpg' %}" alt="" class="img-fluid w-100">
+
+          <div class="button-group-area mt-sm-20 mb-30">
+            <form action="{% url 'professional_create_form' %}">
+            {% csrf_token %}
+              <button class="genric-btn primary-border e-large w-100">Começar assessment</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-9 mb-30">
+        <div class="generic-blockquote">
+          <h3 class="text-heading">{{ user.first_name }} {{ user.last_name }}</h3>
+          O objetivo deste "Assessment" é ajudar você a entender como você está em relação a média dos profissionais com mesmo perfil e que atuam na mesma solução ou módulo SAP que você!<br><br>
+          Clique em "Começar assessment" e preencha seus dados para que possamos realizar seu assessment.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

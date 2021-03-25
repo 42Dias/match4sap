@@ -1,0 +1,114 @@
+{% extends '_base.html' %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+
+<section class="blog_area section-padding mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="container box_1170">
+        <div class="blog_left_sidebar">
+          <h3 class="mb-30">Encontre o profissional SAP para o seu projeto</h3>
+          <form class="form-contact contact_form" action="{% url 'connection_form' %}" method="POST">
+            {% csrf_token %}
+
+            {% for hidden in form.hidden_fields %}
+              {{ hidden }}
+            {% endfor %}
+
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label>Título da busca</label>
+                  {% render_field form.title class+="form-control single-input-secondary" placeholder=form.title.label %}
+                  {% for error in form.title.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-group">
+                  <label>Estado</label>
+                  {% render_field form.state class+="form-control single-input-secondary" placeholder=form.state.label %}
+                  {% for error in form.state.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-group">
+                  <label>Metodologia</label>
+                  {% render_field form.methodology class+="form-control single-input-secondary" placeholder=form.methodology.label %}
+                  {% for error in form.methodology.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-group">
+                  <label>Módulo</label>
+                  {% render_field form.modules class+="form-control single-input-secondary" placeholder=form.modules.label %}
+                  {% for error in form.modules.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-group">
+                  <label>Indústria</label>
+                  {% render_field form.industries class+="form-control single-input-secondary" placeholder=form.industries.label %}
+                  {% for error in form.industries.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-group">
+                  <label>Anos de experiência</label>
+                  {% render_field form.working_years class+="form-control single-input-secondary" placeholder=form.working_years.label %}
+                  {% for error in form.working_years.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-group">
+                  <label>Número de suportes</label>
+                  {% render_field form.supports class+="form-control single-input-secondary" placeholder=form.supports.label %}
+                  {% for error in form.supports.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-group">
+                  <label>Número de implantações</label>
+                  {% render_field form.implementations class+="form-control single-input-secondary" placeholder=form.implementations.label %}
+                  {% for error in form.implementations.errors %}
+                    <span class="help-block">{{ error }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+
+            </div>
+            <div class="form-group mt-3">
+              <button type="submit" class="genric-btn primary e-large" value="save">Confirmar busca</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

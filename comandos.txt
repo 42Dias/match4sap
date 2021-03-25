@@ -1,0 +1,20 @@
+instalar o postegresql 12 como administrador - https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+instalar o vscode como administrador - https://code.visualstudio.com/
+criar o projeto no jenkins
+abrir o projeto no vscode do servidor
+instalar o pyton como administrador - https://www.python.org/downloads/
+pip install virtualenv;
+executar como administrador no poewrshell o seguinte comando e escolher a opção S:
+
+Set-ExecutionPolicy RemoteSigned
+
+COLOCAR ESSES COMANDOS NO JENKINS
+
+virtualenv env;
+.\env\Scripts\activate;
+pip3 install -r requirements.txt;
+pip3 install psycopg2-binary;
+pip3 install pillow;
+python manage.py makemigrations;
+python manage.py migrate;
+python manage.py runserver 0.0.0.0:8199
