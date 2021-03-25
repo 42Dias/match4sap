@@ -176,8 +176,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
-EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.dreamhost.com'
+EMAIL_HOST_USER = 'no.reply@42dias.com.br'
+EMAIL_HOST_PASSWORD = "B31nteractive"
+EMAIL_PORT = 465
 EMAIL_USE_TLS = True
