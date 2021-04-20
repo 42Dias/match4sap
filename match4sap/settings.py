@@ -3,9 +3,9 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-"""  if os.getenv('GAE_INSTANCE'):
+if os.getenv('GAE_INSTANCE'):
      SECRET_KEY = os.environ.get('SECRET_KEY')
- else: """
+else: 
 SECRET_KEY = 'fd3h&uqymrcsyo(_5%&@!jbf182o5)k!)xty=fm056gk34^3v3'
 
 DEBUG = True
@@ -73,10 +73,10 @@ WSGI_APPLICATION = 'match4sap.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': '127.0.0.1',
+        'HOST': '/cloudsql/matchforsap:southamerica-east1:users',
         'NAME': 'match4sap',
         'USER': 'postgres',
-        'PASSWORD': '123456789',
+        'PASSWORD': '$rg7cG$iQWF6',
         'PORT': 5432,
     }
 }
