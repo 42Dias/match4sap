@@ -72,7 +72,7 @@ WSGI_APPLICATION = 'match4sap.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'HOST': '/cloudsql/matchforsap:southamerica-east1:users',
         'NAME': 'match4sap',
         'USER': 'postgres',
