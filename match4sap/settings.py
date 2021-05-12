@@ -73,10 +73,10 @@ WSGI_APPLICATION = 'match4sap.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': '127.0.0.1',
-        'NAME': 'match4sap',
-        'USER': 'postgres',
-        'PASSWORD': '123456789',
+        'HOST': 'localhost',
+        'NAME': 'postgres',
+        'USER': 'root',
+        'PASSWORD': '36a$fDaf',
         'PORT': 5432,
     }
 }
@@ -85,7 +85,7 @@ DATABASES['default']['HOST'] = '/cloudsql/matchforsap:southamerica-east1:users'
 if os.getenv('GAE_INSTANCE'):
     pass
 else:
-    DATABASES['default']['HOST'] = '127.0.0.1'
+    DATABASES['default']['HOST'] = 'localhost'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

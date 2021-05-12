@@ -2,6 +2,7 @@
 __pycache__/
 
 /env
+/tutorial-env
 
 Match4SAP*.json
 start.sh
