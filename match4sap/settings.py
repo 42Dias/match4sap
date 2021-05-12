@@ -81,7 +81,7 @@ DATABASES = {
     }
 }
 
-DATABASES['default']['HOST'] = '/cloudsql/matchforsap:southamerica-east1:users'
+DATABASES['default']['HOST'] = 'localhost'
 if os.getenv('GAE_INSTANCE'):
     pass
 else:
