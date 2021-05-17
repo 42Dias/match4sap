@@ -76,7 +76,7 @@ DATABASES = {
         'HOST': 'localhost',
         'NAME': 'postgres',
         'USER': 'postgres',
-        'PASSWORD': '123456789',
+        'PASSWORD': 'admin',
         'PORT': 5432,
     }
 }
@@ -89,6 +89,14 @@ else:
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
+
+PROJECT_APPS = (
+'MyApp'
+)
+JENKINS_TASKS = (
+'django_jenkins.tasks.run_pep8',
+'django_jenkins.tasks.run_pyflakes'
+)
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -165,8 +173,8 @@ STRIPE_TEST_PUBLISHABLE_KEY = os.environ.get('STRIPE_TEST_PUBLISHABLE_KEY')
 STRIPE_TEST_SECRET_KEY = os.environ.get('STRIPE_TEST_SECRET_KEY')
 
 # Django-storages
-DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
-GS_BUCKET_NAME = 'match4sap'
+""" DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+GS_BUCKET_NAME = 'match4sap' """
 
 # My configs
 AUTH_USER_MODEL = 'users.CustomUser'
