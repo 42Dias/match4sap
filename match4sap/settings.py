@@ -76,7 +76,7 @@ DATABASES = {
         'HOST': 'localhost',
         'NAME': 'postgres',
         'USER': 'postgres',
-        'PASSWORD': 'admin',
+        'PASSWORD': '2841',
         'PORT': 5432,
     }
 }
@@ -180,7 +180,7 @@ GS_BUCKET_NAME = 'match4sap' """
 AUTH_USER_MODEL = 'users.CustomUser'
 
 DEFAULT_FROM_EMAIL = 'no.reply@42dias.com.br'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
 
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
@@ -189,3 +189,5 @@ EMAIL_HOST_USER = 'no.reply@42dias.com.br'
 EMAIL_HOST_PASSWORD = "B31nteractive"
 EMAIL_PORT = 465
 EMAIL_USE_TLS = True
+
+#PRECISA CRIAR O EMAIL COM O DOMINIO DA MATCH4SAP
