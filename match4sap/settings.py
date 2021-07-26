@@ -179,14 +179,14 @@ GS_BUCKET_NAME = 'match4sap' """
 # My configs
 AUTH_USER_MODEL = 'users.CustomUser'
 
-DEFAULT_FROM_EMAIL = 'no.reply@42dias.com.br'
+DEFAULT_FROM_EMAIL = 'equipe@match4sap.com'
 EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
 
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
-EMAIL_HOST = 'smtp.dreamhost.com'
-EMAIL_HOST_USER = 'no.reply@42dias.com.br'
-EMAIL_HOST_PASSWORD = "B31nteractive"
+EMAIL_HOST = 'smtpout.secureserver.net'
+EMAIL_HOST_USER = 'equipe@match4sap.com'
+EMAIL_HOST_PASSWORD = "Match4sap?#"
 EMAIL_PORT = 465
 EMAIL_USE_TLS = True
 
