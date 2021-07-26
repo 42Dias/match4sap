@@ -5,6 +5,7 @@ chardet==3.0.4
 defusedxml==0.6.0
 django-allauth==0.41.0
 django-localflavor==3.0.1
+django-smtp-ssl==1.7
 django-widget-tweaks==1.4.8
 django==3.0.1
 idna==2.9
