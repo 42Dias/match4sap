@@ -64,19 +64,19 @@
               </div>
             </div>
 
-            <div class="row botoes" style="display: none;">
+            <div class="row">
                 <div class="col-md-6 col-xs-12 mt-4 text-center">
                   <h4>Você é profissional?</h4>
                   <button type="submit" class="genric-btn primary e-large w-100"
-                   name="professional">
+                   name="professional" disabled style="background-color: #FF450060;">
                     Faça seu assessment
                   </button>
                 </div>
 
                 <div class="col-md-6 col-xs-12 mt-4 text-center">
                   <h4>Você é recrutador?</h4>
-                  <button type="submit" name="hh_button" class="genric-btn primary e-large w-100"
-                   name="recrutador">
+                  <button type="submit" name="hh_button" class="genric-btn primary e-large w-100 btn2"
+                   name="recrutador" disabled style="background-color: #FF450060;">
                     Inicie agora a sua busca
                   </button>
                 </div>
@@ -89,22 +89,29 @@
 </section>
 <script>
   function ativar(e){
-  
-    // console.log("Foi")
-  var check = document.querySelector(".termos");
-  var bt = document.querySelector(".botoes");
+  // var check = document.querySelector(".termos");
+  let bt = document.querySelector(".genric-btn");
+  let bt2 = document.querySelector(".btn2");
   // var bt2 = document.querySelector("recrutador");
 
-  bt.style.display = e ? "flex" : "none";
+  // bt.style.display = e ? "flex" : "none";
 
-  // if(check == true){
-  //     bt.removeAttribute("disabled");
-  //     // bt2.removeAttribute("disabled");
-  // }
-  // else{
-  //     bt.setAttribute("disabled", true);
-  //     // bt2.setAttribute("disabled");
-  // } 
+  if(e == true){
+      bt.removeAttribute("disabled");
+      bt2.removeAttribute("disabled");
+
+      bt.style.backgroundColor = "#FF4500";
+      bt2.style.backgroundColor = "#FF4500";
+      // bt2.removeAttribute("disabled");
+  }
+  else{
+      bt.setAttribute("disabled", true);
+      bt2.setAttribute("disabled", true);
+
+      bt.style.backgroundColor = "#FF450060";
+      bt2.style.backgroundColor = "#FF450060";
+      // bt2.setAttribute("disabled");
+  } 
 }
 
 </script>
