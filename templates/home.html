@@ -1,46 +1,120 @@
 {% load static %}
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Match4SAP</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="#" />
+    <!-- Place favicon.ico in the root directory -->
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Match4SAP</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="manifest" href="site.webmanifest"> -->
-  <link rel="shortcut icon" type="image/x-icon" href="#">
-  <!-- Place favicon.ico in the root directory -->
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/gijgo.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/slicknav.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
-  <!-- CSS here -->
-  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
-  <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
-  <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
-  <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
-  <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
-  <link rel="stylesheet" href="{% static 'css/gijgo.css' %}">
-  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
-  <link rel="stylesheet" href="{% static 'css/slick.css' %}">
-  <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <style>
+      .cookieConsentContainer {
+        z-index: 999;
+        width: 35%;
+        min-height: 20px;
+        box-sizing: border-box;
+        padding: 20px 30px 20px 30px;
+        background: #232323;
+        overflow: hidden;
+        position: fixed;
+        bottom: 3px;
+        right: 8px;
+        display: none;
+        border-radius: 8px;
+      }
+      .cookieConsentContainer .cookieTitle a {
+        font-family: OpenSans, arial, sans-serif;
+        color: #fff;
+        font-size: 24px;
+        line-height: 20px;
+        display: block;
+      }
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-</head>
+      .cookieConsentContainer .cookieTitle a:hover{
+        color: #fff;
+      }
 
-<body>
+      .cookieConsentContainer .cookieDesc .paragraph {
+        margin: 0;
+        padding: 0;
+        font-family: OpenSans, arial, sans-serif;
+        color: #fff;
+        font-size: 13px;
+        line-height: 20px;
+        display: block;
+        margin-top: 10px;
+      }
+      .cookieConsentContainer .cookieDesc a {
+        font-family: OpenSans, arial, sans-serif;
+        color: #fff;
+        text-decoration: underline;
+      }
+      .cookieConsentContainer .cookieButton a {
+        display: inline-block;
+        font-family: OpenSans, arial, sans-serif;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 14px;
+        background: orangered;
+        box-sizing: border-box;
+        padding: 15px 24px;
+        text-align: center;
+        transition: background 0.3s;
+        border-radius: 4px;
+      }
+      .cookieConsentContainer .cookieButton a:hover {
+        cursor: pointer;
+        background: white;
+      }
+      @media (max-width: 980px) {
+        .cookieConsentContainer {
+          bottom: 0 !important;
+          left: 0 !important;
+          width: 100% !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
     <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
 
     <!-- header-start -->
     <header>
-      <div class="header-area ">
+      <div class="header-area">
         <div class="header-top_area d-none d-lg-block">
           <div class="container">
             <div class="row">
-              <div class="col-xl-5 col-md-5 ">
+              <div class="col-xl-5 col-md-5">
                 <div class="header_left">
                   <p>Bem-vindo ao Match4SAP!</p>
                 </div>
@@ -51,21 +125,32 @@
                     <ul>
                       <li>
                         <a href="#">
-
-                          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+                          <svg
+                            width="1em"
+                            height="1em"
+                            viewBox="0 0 16 16"
+                            class="bi bi-envelope-fill"
+                            fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"
+                            />
                           </svg>
 
-                         equipe@match4sap.com
+                          equipe@match4sap.com
                         </a>
-                        </li>
+                      </li>
                     </ul>
                   </div>
                   <div class="social_media_links">
                     <a href="https://www.linkedin.com/company/match4sap/">
                       <i class="fa fa-linkedin"></i>
                     </a>
-                    <a href="https://www.youtube.com/channel/UCt9JuLRGTBCeIkPcG50uc0w">
+                    <a
+                      href="https://www.youtube.com/channel/UCt9JuLRGTBCeIkPcG50uc0w"
+                    >
                       <i class="fa fa-youtube"></i>
                     </a>
                   </div>
@@ -81,66 +166,89 @@
                 <div class="col-xl-3 col-lg-2 col-9">
                   <div class="logo">
                     <a href="{% url 'home' %}">
-                      <img src="{% static 'img/logo.png' %}" class="img-fluid" alt="">
+                      <img
+                        src="{% static 'img/logo.png' %}"
+                        class="img-fluid"
+                        alt=""
+                      />
                     </a>
                   </div>
                 </div>
-                <div class="col-xl-6 col-lg-7">
-                </div>
+                <div class="col-xl-6 col-lg-7"></div>
                 <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                   <div class="Appointment">
-                    {% if user.is_authenticated %}
-                      {% if user.is_headhunter %}
-                        <a href="{% url 'headhunter_profile' pk=user.id %}" class="genric-btn primary circle arrow e-large">{{ user.first_name }}</a>
-                      {% else %}
-                        {% if not user.professional %}
-                          <a href="{% url 'pre_professional_profile' pk=user.id %}" class="genric-btn primary circle arrow e-large">{{ user.first_name }}</a>
-                        {% else %}
-                          <a href="{% url 'professional_profile' pk=user.id %}" class="genric-btn primary circle arrow e-large">{{ user.first_name }}</a>
-                        {% endif %}
-                      {% endif %}
+                    {% if user.is_authenticated %} {% if user.is_headhunter %}
+                    <a
+                      href="{% url 'headhunter_profile' pk=user.id %}"
+                      class="genric-btn primary circle arrow e-large"
+                      >{{ user.first_name }}</a
+                    >
+                    {% else %} {% if not user.professional %}
+                    <a
+                      href="{% url 'pre_professional_profile' pk=user.id %}"
+                      class="genric-btn primary circle arrow e-large"
+                      >{{ user.first_name }}</a
+                    >
                     {% else %}
-                      <a href="{% url 'account_login' %}" class="genric-btn primary circle arrow e-large">Log In<span class="lnr lnr-arrow-right"></span></a>
+                    <a
+                      href="{% url 'professional_profile' pk=user.id %}"
+                      class="genric-btn primary circle arrow e-large"
+                      >{{ user.first_name }}</a
+                    >
+                    {% endif %} {% endif %} {% else %}
+                    <a
+                      href="{% url 'account_login' %}"
+                      class="genric-btn primary circle arrow e-large"
+                      >Log In<span class="lnr lnr-arrow-right"></span
+                    ></a>
                     {% endif %}
                   </div>
                 </div>
-                
+
                 <div class="col-12">
                   <div class="mobile_menu d-block d-lg-none">
-                    <div class="main-menu  d-none d-lg-block">
+                    <div class="main-menu d-none d-lg-block">
                       <nav>
                         <ul id="navigation">
                           {% if user.is_authenticated %}
-                            <li><a href="#">{{ user.first_name }} </a>
-                              <ul class="submenu">
-                                {% if user.is_headhunter %}
-                                  <li><a href="{% url 'headhunter_profile' pk=user.id %}">Profile</a></li>
-                                {% else %}
-                                  
-                                  {% if not user.professional %}
-                                    <a href="{% url 'pre_professional_profile' pk=user.id %}">Profile</a>
-                                  {% else %}
-                                    <a href="{% url 'professional_profile' pk=user.id %}">Profile</a>
-                                  {% endif %}
-
-                                {% endif %}
-                                <li><a href="{% url 'account_logout' %}">Log Out</a></li>
-                              </ul>
-                            </li>
+                          <li>
+                            <a href="#">{{ user.first_name }} </a>
+                            <ul class="submenu">
+                              {% if user.is_headhunter %}
+                              <li>
+                                <a
+                                  href="{% url 'headhunter_profile' pk=user.id %}"
+                                  >Profile</a
+                                >
+                              </li>
+                              {% else %} {% if not user.professional %}
+                              <a
+                                href="{% url 'pre_professional_profile' pk=user.id %}"
+                                >Profile</a
+                              >
+                              {% else %}
+                              <a
+                                href="{% url 'professional_profile' pk=user.id %}"
+                                >Profile</a
+                              >
+                              {% endif %} {% endif %}
+                              <li>
+                                <a href="{% url 'account_logout' %}">Log Out</a>
+                              </li>
+                            </ul>
+                          </li>
                           {% else %}
-                            <li>
-                              <a href="{% url 'account_login' %}">Log in</a>
-                            </li>
+                          <li>
+                            <a href="{% url 'account_login' %}">Log in</a>
+                          </li>
                           {% endif %}
                         </ul>
                       </nav>
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -150,34 +258,43 @@
     <!-- slider_area_start -->
     <div class="slider_area">
       <div class="slider_active owl-carousel">
-
-        <div class="single_slider  d-flex align-items-center slider_bg_2 overlay2">
+        <div
+          class="single_slider d-flex align-items-center slider_bg_2 overlay2"
+        >
           <div class="container">
             <div class="row">
               <div class="col-xl-12">
-                <div class="slider_text ">
-                  <h3>Ajudando os profissionais SAP<br>
-                      a desenvolver novas habilidades</h3>
+                <div class="slider_text">
+                  <h3>
+                    Ajudando os profissionais SAP<br />
+                    a desenvolver novas habilidades
+                  </h3>
                   <div class="video_service_btn">
-
-                    {% if user.is_authenticated %}
-
-                      {% if user.is_headhunter %}
-                        <a href="{% url 'headhunter_profile' pk=user.id %}" class="genric-btn primary circle arrow e-large">Para Profissionais</a>
-                      {% else %}
-                        
-                        {% if not user.professional %}
-                          <a href="{% url 'pre_professional_profile' pk=user.id %}" class="genric-btn primary circle arrow e-large">Para Profissionais</a>
-                        {% else %}
-                          <a href="{% url 'professional_profile' pk=user.id %}" class="genric-btn primary circle arrow e-large">Para Profissionais</a>
-                        {% endif %}
-
-                      {% endif %}
-
+                    {% if user.is_authenticated %} {% if user.is_headhunter %}
+                    <a
+                      href="{% url 'headhunter_profile' pk=user.id %}"
+                      class="genric-btn primary circle arrow e-large"
+                      >Para Profissionais</a
+                    >
+                    {% else %} {% if not user.professional %}
+                    <a
+                      href="{% url 'pre_professional_profile' pk=user.id %}"
+                      class="genric-btn primary circle arrow e-large"
+                      >Para Profissionais</a
+                    >
                     {% else %}
-                      <a href="{% url 'signup_pro' %}" class="genric-btn primary circle arrow e-large">Para Profissionais</a>
-                    {% endif %} 
-
+                    <a
+                      href="{% url 'professional_profile' pk=user.id %}"
+                      class="genric-btn primary circle arrow e-large"
+                      >Para Profissionais</a
+                    >
+                    {% endif %} {% endif %} {% else %}
+                    <a
+                      href="{% url 'signup_pro' %}"
+                      class="genric-btn primary circle arrow e-large"
+                      >Para Profissionais</a
+                    >
+                    {% endif %}
                   </div>
                 </div>
               </div>
@@ -185,38 +302,49 @@
           </div>
         </div>
 
-        <div class="single_slider  d-flex align-items-center slider_bg_1 overlay2">
+        <div
+          class="single_slider d-flex align-items-center slider_bg_1 overlay2"
+        >
           <div class="container">
             <div class="row">
               <div class="col-xl-12">
-                <div class="slider_text ">
-                  <h3>Encontre o profissional SAP ideal<br>
-                      para seu projeto </h3>
+                <div class="slider_text">
+                  <h3>
+                    Encontre o profissional SAP ideal<br />
+                    para seu projeto
+                  </h3>
                   <div class="video_service_btn">
-                    {% if user.is_authenticated %}
-
-                      {% if user.is_headhunter %}
-                        <a href="{% url 'headhunter_profile' pk=user.id %}" class="genric-btn primary circle arrow e-large">Para Headhunters</a>
-                      {% else %}
-                        
-                        {% if not user.professional %}
-                          <a href="{% url 'pre_professional_profile' pk=user.id %}" class="genric-btn primary circle arrow e-large">Para Headhunters</a>
-                        {% else %}
-                          <a href="{% url 'professional_profile' pk=user.id %}" class="genric-btn primary circle arrow e-large">Para Headhunters</a>
-                        {% endif %}
-
-                      {% endif %}
-
+                    {% if user.is_authenticated %} {% if user.is_headhunter %}
+                    <a
+                      href="{% url 'headhunter_profile' pk=user.id %}"
+                      class="genric-btn primary circle arrow e-large"
+                      >Para Headhunters</a
+                    >
+                    {% else %} {% if not user.professional %}
+                    <a
+                      href="{% url 'pre_professional_profile' pk=user.id %}"
+                      class="genric-btn primary circle arrow e-large"
+                      >Para Headhunters</a
+                    >
                     {% else %}
-                      <a href="{% url 'signup_pro' %}" class="genric-btn primary circle arrow e-large">Para Headhunters</a>
-                    {% endif %} 
+                    <a
+                      href="{% url 'professional_profile' pk=user.id %}"
+                      class="genric-btn primary circle arrow e-large"
+                      >Para Headhunters</a
+                    >
+                    {% endif %} {% endif %} {% else %}
+                    <a
+                      href="{% url 'signup_pro' %}"
+                      class="genric-btn primary circle arrow e-large"
+                      >Para Headhunters</a
+                    >
+                    {% endif %}
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        
       </div>
     </div>
     <!-- slider_area_end -->
@@ -225,44 +353,76 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-6 col-md-6 col-lg-4">
-            <div class="single_service text-center" style="border: 2px solid #ff5e13;">
-              <div class="service_icon" style="background: #ff5e13;">
-                <img src="{% static 'img/svg_icon/2.svg' %}" alt="">
+            <div
+              class="single_service text-center"
+              style="border: 2px solid #ff5e13"
+            >
+              <div class="service_icon" style="background: #ff5e13">
+                <img src="{% static 'img/svg_icon/2.svg' %}" alt="" />
               </div>
               <h3>Quero realizar meu assessment!</h3>
 
-              {% if user.is_authenticated %}
-                {% if not user.professional %}
-                  <a href="{% url 'pre_professional_profile' pk=user.id %}" class="genric-btn primary circle e-large w-100" style="font-size: larger;">Iniciar Assessment</a>
-                {% else %}
-                  <a href="{% url 'professional_profile' pk=user.id %}" class="genric-btn primary circle e-large w-100" style="font-size: larger;">Iniciar Assessment</a>
-                {% endif %}
+              {% if user.is_authenticated %} {% if not user.professional %}
+              <a
+                href="{% url 'pre_professional_profile' pk=user.id %}"
+                class="genric-btn primary circle e-large w-100"
+                style="font-size: larger"
+                >Iniciar Assessment</a
+              >
               {% else %}
-                <a href="{% url 'signup_pro' %}" class="genric-btn primary circle e-large w-100" style="font-size: larger;">Iniciar Assessment</a>
+              <a
+                href="{% url 'professional_profile' pk=user.id %}"
+                class="genric-btn primary circle e-large w-100"
+                style="font-size: larger"
+                >Iniciar Assessment</a
+              >
+              {% endif %} {% else %}
+              <a
+                href="{% url 'signup_pro' %}"
+                class="genric-btn primary circle e-large w-100"
+                style="font-size: larger"
+                >Iniciar Assessment</a
+              >
               {% endif %}
             </div>
           </div>
           <div class="col-xl-6 col-md-6 col-lg-4">
             <div class="single_service text-center" id="home_button">
-              <div class="service_icon" style="background: #fff;">
-                <img class="img-fluid" src="{% static 'img/svg_icon/presidente.svg' %}" alt="">
+              <div class="service_icon" style="background: #fff">
+                <img
+                  class="img-fluid"
+                  src="{% static 'img/svg_icon/presidente.svg' %}"
+                  alt=""
+                />
               </div>
-              <h3 style="color: #fff;">Quero encontrar profissionais SAP</h3>
+              <h3 style="color: #fff">Quero encontrar profissionais SAP</h3>
 
-              {% if user.is_authenticated %}
-                {% if user.is_headhunter %}
-                  <a href="{% url 'headhunter_profile' pk=user.id %}" class="genric-btn primary-border circle e-large w-100" style="font-size: larger;">Iniciar Buscas</a>
-                {% else %}
-                  <a href="{% url 'signup_pro' %}" class="genric-btn primary-border circle e-large w-100" style="font-size: larger;">Iniciar Buscas</a>
-                {% endif %}
+              {% if user.is_authenticated %} {% if user.is_headhunter %}
+              <a
+                href="{% url 'headhunter_profile' pk=user.id %}"
+                class="genric-btn primary-border circle e-large w-100"
+                style="font-size: larger"
+                >Iniciar Buscas</a
+              >
               {% else %}
-                <a href="{% url 'signup_pro' %}" class="genric-btn primary-border circle e-large w-100" style="font-size: larger;">Iniciar Buscas</a>
+              <a
+                href="{% url 'signup_pro' %}"
+                class="genric-btn primary-border circle e-large w-100"
+                style="font-size: larger"
+                >Iniciar Buscas</a
+              >
+              {% endif %} {% else %}
+              <a
+                href="{% url 'signup_pro' %}"
+                class="genric-btn primary-border circle e-large w-100"
+                style="font-size: larger"
+                >Iniciar Buscas</a
+              >
               {% endif %}
-
             </div>
           </div>
         </div>
-      </div>  
+      </div>
     </div>
 
     <!-- service_area_start -->
@@ -275,32 +435,32 @@
             </div>
           </div>
         </div>
-          <div class="row">
-            <div class="col-xl-4 col-md-6 col-lg-4">
-              <div class="single_service text-center">
-                <div class="service_icon">
-                  <img src="{% static 'img/svg_icon/1.svg' %}" alt="">
-                </div>
-                <h3>Assessment para profissionais SAP</h3>
+        <div class="row">
+          <div class="col-xl-4 col-md-6 col-lg-4">
+            <div class="single_service text-center">
+              <div class="service_icon">
+                <img src="{% static 'img/svg_icon/1.svg' %}" alt="" />
               </div>
-            </div>
-            <div class="col-xl-4 col-md-6 col-lg-4">
-              <div class="single_service text-center">
-                <div class="service_icon">
-                  <img src="{% static 'img/svg_icon/2.svg' %}" alt="">
-                </div>
-                <h3>Ranking dos melhores profissionais SAP</h3>
-              </div>
-            </div>
-            <div class="col-xl-4 col-md-6 col-lg-4">
-              <div class="single_service text-center">
-                <div class="service_icon">
-                  <img src="{% static 'img/svg_icon/3.svg' %}" alt="">
-                </div>
-                <h3>Os profissionais SAP ideais para cada projeto</h3>
-              </div>
+              <h3>Assessment para profissionais SAP</h3>
             </div>
           </div>
+          <div class="col-xl-4 col-md-6 col-lg-4">
+            <div class="single_service text-center">
+              <div class="service_icon">
+                <img src="{% static 'img/svg_icon/2.svg' %}" alt="" />
+              </div>
+              <h3>Ranking dos melhores profissionais SAP</h3>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6 col-lg-4">
+            <div class="single_service text-center">
+              <div class="service_icon">
+                <img src="{% static 'img/svg_icon/3.svg' %}" alt="" />
+              </div>
+              <h3>Os profissionais SAP ideais para cada projeto</h3>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- service_area_end -->
@@ -312,13 +472,20 @@
           <div class="col-xl-6 col-lg-6">
             <div class="about_text">
               <h3>Por que MATCH4SAP?</h3>
-              <p>O Match4SAP é o local ideal para Profissionais e Recrutadores do mundo SAP se encontrarem.</p>
-                <a href="https://www.evolutosolutions.com/assessmentmatch4sap/" class="boxed-btn3">Sobre</a>
+              <p>
+                O Match4SAP é o local ideal para Profissionais e Recrutadores do
+                mundo SAP se encontrarem.
+              </p>
+              <a
+                href="https://www.evolutosolutions.com/assessmentmatch4sap/"
+                class="boxed-btn3"
+                >Sobre</a
+              >
             </div>
           </div>
           <div class="col-xl-6 col-lg-6">
             <div class="about_thumb">
-              <img src="{% static 'img/service/about.png' %}" alt="">
+              <img src="{% static 'img/service/about.png' %}" alt="" />
             </div>
           </div>
         </div>
@@ -333,18 +500,18 @@
           <div class="col-xl-4 col-lg-4 col-md-4">
             <div class="single_counter text-center">
               <div class="counter_icon">
-                <img src="{% static 'img/svg_icon/group.svg' %}" alt="">
+                <img src="{% static 'img/svg_icon/group.svg' %}" alt="" />
               </div>
-              <h3> <span class="counter">10000</span> <span> +</span> </h3>
+              <h3><span class="counter">10000</span> <span> +</span></h3>
               <p>Profissionais Cadastrados</p>
             </div>
           </div>
           <div class="col-xl-4 col-lg-4 col-md-4">
             <div class="single_counter text-center">
               <div class="counter_icon">
-                <img src="{% static 'img/svg_icon/cart.svg' %}" alt="">
+                <img src="{% static 'img/svg_icon/cart.svg' %}" alt="" />
               </div>
-              <h3> <span class="counter">97</span> <span>%</span> </h3>
+              <h3><span class="counter">97</span> <span>%</span></h3>
               <p>Buscas com Sucesso</p>
             </div>
           </div>
@@ -360,9 +527,9 @@
           <div class="col-xl-4 col-lg-4 col-md-4">
             <div class="single_counter text-center">
               <div class="counter_icon">
-                <img src="{% static 'img/svg_icon/respect.svg' %}" alt="">
+                <img src="{% static 'img/svg_icon/respect.svg' %}" alt="" />
               </div>
-              <h3> <span class="counter">5637</span> </h3>
+              <h3><span class="counter">5637</span></h3>
               <p>Matches Realizados</p>
             </div>
           </div>
@@ -372,9 +539,8 @@
     <!-- /counter_area  -->
 
     <br />
-    
 
-    <div class="testimonial_area overlay ">
+    <div class="testimonial_area overlay">
       <div class="container">
         <div class="row">
           <div class="col-xl-12">
@@ -382,12 +548,21 @@
               <div class="single_carousel">
                 <div class="single_testmonial text-center">
                   <div class="quote">
-                    <img src="{% static 'img/svg_icon/quote.svg' %}" alt="">
+                    <img src="{% static 'img/svg_icon/quote.svg' %}" alt="" />
                   </div>
-                  <p>O MATCH4SAP compara o perfil do profissional SAP com a média do mercado e elabora um relatório com recomendações personalizadas que contribuem para aumentar a interesse dos recrutadores...</p>
+                  <p>
+                    O MATCH4SAP compara o perfil do profissional SAP com a média
+                    do mercado e elabora um relatório com recomendações
+                    personalizadas que contribuem para aumentar a interesse dos
+                    recrutadores...
+                  </p>
                   <div class="testmonial_author">
                     <div class="thumb">
-                      <img class="img-fluid" src="{% static 'img/portrait.png' %}" alt="">
+                      <img
+                        class="img-fluid"
+                        src="{% static 'img/portrait.png' %}"
+                        alt=""
+                      />
                     </div>
                     <h3>Rogério Toscano</h3>
                     <span>Executivo da área de SAP</span>
@@ -409,11 +584,16 @@
               <div class="footer_widget">
                 <div class="footer_logo">
                   <a href="#">
-                    <img src="{% static 'img/logo.png' %}" class="img-fluid" alt="">
+                    <img
+                      src="{% static 'img/logo.png' %}"
+                      class="img-fluid"
+                      alt=""
+                    />
                   </a>
                 </div>
                 <p>
-                  <a href="mailto:equipe@match4sap.com">equipe@match4sap.com</a> <br>
+                  <a href="mailto:equipe@match4sap.com">equipe@match4sap.com</a>
+                  <br />
                 </p>
               </div>
             </div>
@@ -426,12 +606,27 @@
           <div class="row">
             <div class="col-xl-12">
               <p class="copy_right text-center">
-                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> Match4SAP All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                Match4SAP All rights reserved | This template is made with
+                <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               </p>
               <p class="copy_right text-center">
-                Ícones feitos por <a href="https://www.flaticon.com/br/autores/ultimatearm" title="ultimatearm">ultimatearm</a> from <a href="https://www.flaticon.com/br/" title="Flaticon"> www.flaticon.com</a>
+                Ícones feitos por
+                <a
+                  href="https://www.flaticon.com/br/autores/ultimatearm"
+                  title="ultimatearm"
+                  >ultimatearm</a
+                >
+                from
+                <a href="https://www.flaticon.com/br/" title="Flaticon">
+                  www.flaticon.com</a
+                >
               </p>
             </div>
           </div>
@@ -441,34 +636,107 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Match
     <!--/ footer end  -->
 
     <!-- JS here -->
-  <script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
-  <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
-  <script src="{% static 'js/popper.min.js' %}"></script>
-  <script src="{% static 'js/bootstrap.min.js' %}"></script>
-  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
-  <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
-  <script src="{% static 'js/ajax-form.js' %}"></script>
-  <script src="{% static 'js/waypoints.min.js' %}"></script>
-  <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
-  <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
-  <script src="{% static 'js/scrollIt.js' %}"></script>
-  <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
-  <script src="{% static 'js/wow.min.js' %}"></script>
-  <script src="{% static 'js/nice-select.min.js' %}"></script>
-  <script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
-  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-  <script src="{% static 'js/plugins.js' %}"></script>
-  <script src="{% static 'js/gijgo.min.js' %}"></script>
-  <script src="{% static 'js/slick.min.js' %}"></script>
-  <!--contact js-->
-  <script src="{% static 'js/contact.js' %}"></script>
-  <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
-  <script src="{% static 'js/jquery.form.js' %}"></script>
-  <script src="{% static 'js/jquery.validate.min.js' %}"></script>
-  <script src="{% static 'js/mail-script.js' %}"></script>
-  
-    
-  <script src="{% static 'js/main.js' %}"></script>
-</body>
+    <script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/ajax-form.js' %}"></script>
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/scrollIt.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/gijgo.min.js' %}"></script>
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    <!--contact js-->
+    <script src="{% static 'js/contact.js' %}"></script>
+    <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'js/jquery.form.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/mail-script.js' %}"></script>
 
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script>
+      var purecookieTitle = "Cookies.",
+        purecookieDesc =
+          "Ao utilizar este site, você automaticamente está aceitando os cookies de navegação.",
+        purecookieLink =
+          '<a href="https://www.cssscript.com/privacy-policy/" target="_blank">Saiba mais.</a>',
+        purecookieButton = "Aceitar cookies";
+      function pureFadeIn(e, o) {
+        var i = document.getElementById(e);
+        (i.style.opacity = 0),
+          (i.style.display = o || "block"),
+          (function e() {
+            var o = parseFloat(i.style.opacity);
+            (o += 0.02) > 1 ||
+              ((i.style.opacity = o), requestAnimationFrame(e));
+          })();
+      }
+
+      function pureFadeOut(e) {
+        var o = document.getElementById(e);
+        (o.style.opacity = 1),
+          (function e() {
+            (o.style.opacity -= 0.02) < 0
+              ? (o.style.display = "none")
+              : requestAnimationFrame(e);
+          })();
+      }
+      
+      function setCookie(e, o, i) {
+        var t = "";
+        if (i) {
+          var n = new Date();
+          n.setTime(n.getTime() + 24 * i * 60 * 60 * 1e3),
+            (t = "; expires=" + n.toUTCString());
+        }
+        document.cookie = e + "=" + (o || "") + t + "; path=/";
+      }
+      
+      function getCookie(e) {
+        for (
+          var o = e + "=", i = document.cookie.split(";"), t = 0;
+          t < i.length;
+          t++
+        ) {
+          for (var n = i[t]; " " == n.charAt(0); ) n = n.substring(1, n.length);
+          if (0 == n.indexOf(o)) return n.substring(o.length, n.length);
+        }
+        return null;
+      }
+      function eraseCookie(e) {
+        document.cookie = e + "=; Max-Age=-99999999;";
+      }
+      function cookieConsent() {
+        getCookie("purecookieDismiss") ||
+          ((document.body.innerHTML +=
+              '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>' +
+              purecookieTitle +
+              '</a></div><div class="cookieDesc"><p class="paragraph">' +
+              purecookieDesc +
+              " " +
+              purecookieLink +
+              '</p></div>  <div class="cookieButton"><a onClick="purecookieDismiss();">' +
+              purecookieButton +
+              '</a></div>'),
+          pureFadeIn("cookieConsentContainer"));
+      }
+      function purecookieDismiss() {
+        setCookie("purecookieDismiss", "1", 7),
+          pureFadeOut("cookieConsentContainer");
+      }
+      window.onload = function () {
+        cookieConsent();
+      };
+    </script>
+  </body>
 </html>
