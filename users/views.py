@@ -14,7 +14,7 @@ class UserSignupView(SignupView):
     def get_context_data(self, **kwargs):
         ret = super().get_context_data(**kwargs)
         ret.update(self.kwargs)
-        return ret
+        return ret        
 
     def form_valid(self, form):
         if form.is_valid():
@@ -33,3 +33,10 @@ class UserSignupView(SignupView):
             success_url = reverse_lazy('professional_create_form')
         return success_url
 
+class TermosView(SignupView):
+    template_name = 'account/termos.html'
+    form_class = CustomUserCreationForm
+    login_url = 'account_login'
+    # Captura o atual user.
+    def get_termos(self):
+        return reverse_lazy('termos')

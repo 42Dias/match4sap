@@ -2,6 +2,7 @@ import uuid
 
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.urls.base import reverse
 
 from localflavor.br.br_states import STATE_CHOICES
 
@@ -15,6 +16,7 @@ class CustomUser(AbstractUser):
     is_headhunter = models.BooleanField(default=False)
     phone = models.CharField(max_length=16, unique=True, blank=True, null=True)
     state = models.CharField(max_length=100, choices=STATE_CHOICES, blank=True, null=True)
+    # termos =  models.BooleanField(default=False)
 
     def get_absolute_url(self):
         if not self.is_headhunter:
